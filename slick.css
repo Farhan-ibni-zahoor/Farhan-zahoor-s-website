@@ -117,10 +117,28 @@
     display: none;
 }
 
-@charset 'UTF-8';
-/* Slider */
-.slick-loading .slick-list
-{
+/* Slick Slider Initialization */
+.slick-content-slider {
+    margin: 2.5% 0;
+    width: 95%;
+}
+
+/* Individual Slide Styles */
+.content-slide {
+    background-color: #333;
+    color: #fff;
+    height: 100px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* Slick Slider Styles */
+.slick-slider {
+    /* Additional styles for the entire slider container */
+}
+
+/* Loading State */
+.slick-loading .slick-list {
     background: #fff url('../images/ajax-loader.gif') center center no-repeat;
 }
 
