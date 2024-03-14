@@ -498,6 +498,8 @@
     transform: translate3d(0, 0, 0);
   }
 
+  
+
   15% {
     -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
     transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
@@ -3622,4 +3624,8 @@
     -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
   }
+}
+.element-to-animate {
+  -webkit-animation: button-push 1s ease-in-out infinite alternate;
+  animation: button-push 1s ease-in-out infinite alternate;
 }
