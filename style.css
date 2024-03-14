@@ -408,7 +408,11 @@ header.desktop-header-1 .vertical-menu li .switch {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-backface-visibility: hidden;
+  .slick-slider {
+    /* Additional styles for the entire slider container */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; /* Standard syntax */
+}
 }
 header.desktop-header-1 .vertical-menu li a {
   color: #FFF;
@@ -1534,17 +1538,40 @@ body.dark footer.footer {
 .btn:focus {
   outline: 0;
 }
+.element-to-animate {
+    -webkit-animation: button-push 1s ease-in-out infinite alternate;
+    animation: button-push 1s ease-in-out infinite alternate;
+}
 
-@-webkit-keyframes button-push {
+@keyframes button-push {
+  0% {
+      transform: scale(1);
+  }
   50% {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
+      transform: scale(0.8);
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+      transform: scale(1);
   }
 }
+
+@-webkit-keyframes button-push {
+  0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+  50% {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+  }
+  100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+}
+
+
+
 @keyframes hvr-push {
   50% {
     -webkit-transform: scale(0.8);
@@ -1983,10 +2010,11 @@ body.dark footer.footer {
 }
 
 .mfp-zoom-in {
-  /* start state */
-  /* animate in */
-  /* animate out */
+  /* Start state */
+  opacity: 0; /* Example: Set initial opacity to 0 */
+  transform: scale(0); /* Example: Set initial scale to 0 */
 }
+
 .mfp-zoom-in .mfp-with-anim {
   opacity: 0;
   transition: all 0.2s ease-in-out;
