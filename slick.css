@@ -135,7 +135,12 @@
 /* Slick Slider Styles */
 .slick-slider {
     /* Additional styles for the entire slider container */
+    width: 100%; /* Example: Make the slider container take up the full width */
+    margin: 0 auto; /* Example: Center the slider container horizontally */
+    background-color: #f0f0f0; /* Example: Set background color */
+    /* Add any other styles as needed */
 }
+
 
 /* Loading State */
 .slick-loading .slick-list {
